@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-size: cover;
+			transition: background-image 1s ease-in-out;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 24px;
+		}
+
+		#content-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#content {
+			margin-top: 10%;
+			margin-bottom: 20px;
+			width: 500px;
+			height: 160px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#txt {
+			text-align: center;
+			width: 500px;
+			height: 80px;
+			font-size: large;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>노래 맞추기 게임</title>
+
+</head>
+
+<body id="background">
+
+	<div id="content-container">
+		<div id="content">
+			<textarea readonly
+				style="resize: none; border: none; width: 500px; height: 160px; font-size: 20px; overflow: hidden;">
+            기능소개
+
+            1.스페이스바를 누르면 일시정지 및 재생
+            2.엔터키를 누르면 확인 버튼
+            3.확인 버튼을 누르면 정답 확인 후 2초 후에 자동으로 다음곡 재생
+            </textarea>
+		</div>
+
+		<div>
+			<input id="txt" type="text" readonly value="">
+		</div>
+
+		<!-- 나머지 div들은 여기에 추가 -->
+
+		<div>
+			<audio controls="controls" id="audio_player" autoplay="true">
+				노래
+			</audio>
+		</div>
+
+		<div>
+			<input type="text" id="answer" placeholder="정답" autofocus="true">
+			<button id="someButton" onclick="playNextSong()">확인</button>
+		</div>
+	</div>
+</body>
+
+</html>

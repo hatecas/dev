@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'cookierun';
+	src: url('CookieRun\ Regular.ttf');
+}
+
+h1 {
+	font-family: 'cookierun';
+	color: #FF5F00;
+}
+
+p {
+	font-family: 'cookierun';
+	color: darkgray;
+	font-size: 120%;
+	line-height: 25px;
+	text-shadow: 1px 1px 1px black;
+}
+
+li {
+	float: right;
+	margin-left: 40px;
+}
+
+main,
+form {
+	width: 1420px;
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+textarea {
+	width: 700px;
+	height: 300px;
+}
+
+#List_ul {
+	list-style: circle
+}
+
+
+#Title {
+	text-align: center;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.div_left {
+	width: 700px;
+	height: 300px;
+	float: left;
+	margin-right: 20px;
+	z-index: 2 !important;
+}
+
+.div_right {
+	width: 700px;
+	height: 300px;
+	float: left;
+	z-index: 2;
+}
+
+.container {
+	width:300px;
+	height:450px;
+    background-image: url('./cookie.png'); /* 배경 이미지 경로를 설정해주세요 */
+    background-size:300px 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease; /* 부드럽게 회전하기 위한 트랜지션 속성 설정 */
+}
+
+.container:hover {
+	transition: transform 0.3s ease !important;
+    transform: rotate(45deg) !important; /* 마우스 호버 시 45도 회전 */
+}
+
+
+.div_text {
+	font-family: 'cookierun';
+	font-size: 120%;
+	color: darkgray;
+	width: 400px;
+	height: 40px;
+	text-align: center;
+	display: inline-block;
+}
+
+.div_input {
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	display: inline-block;
+}
+
+.input_size {
+	width: 200px;
+	height: 20px;
+}
+
+.comment {
+	font-size: 12px;
+	color: blue;
+	font-style: italic;
+}
+
+.li_notice {
+	float: left;
+}
+
+.bgan{
+	width: 100%;
+	height: vh;
+
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
+    animation: animateBackground 10s infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-color: #99CCFF;
+    }
+    33% {
+        background-color: #CCFFCC;
+    }
+    66% {
+        background-color: #FFCCCC;
+    }
+    100% {
+        background-color: #99CCFF;
+    }
+}
+
+.updown{
+
+  animation: up-down 1.4s infinite ease-in-out alternate;
+}
+
+/*@keyframes up-down{
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-20px);
+  }
+}*/
+
+.background{
+	background-image: url(./cookie.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: transfrom 0.3s ease;
+	
+}
+
+.background:hover{
+	transform: rotate( 45deg );
+}
+
+footer {
+	text-align: center;
+  }
+  
+  iframe {
+	display: inline-block; /* 인라인 블록 요소로 변경 */
+	vertical-align: middle; /* 수직 정렬 */
+  }
+  
