@@ -84,7 +84,7 @@
 				.addEventListener(
 						"click",
 						function() {
-							location.href = '/calc/compute_input.do';
+							location.href = '/calc.jw';
 						})
 		document
 				.getElementById('btnBase')

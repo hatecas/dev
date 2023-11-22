@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import calc.controller.CalcController;
 import index.controller.IndexController;
 import login.controller.LoginController;
 import signin.controller.SigninController;
@@ -32,6 +33,10 @@ public class MainServlet extends HttpServlet{
 		//uri가 signin.jw일경우 signin.jsp로 이동
 		if(-1<uri.indexOf("/signin.jw")) {
 			SigninController.service(req, res);
+		}
+		//uri가 signin.jw일경우 signin.jsp로 이동
+		if(-1<uri.indexOf("/calc.jw")) {
+			CalcController.service(req, res);
 		}
 	}
 }
