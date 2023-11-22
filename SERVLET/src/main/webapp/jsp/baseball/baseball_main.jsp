@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +49,7 @@
 </head>
 <body>
 	<form id="frmBase"
-		action="http://192.168.200.128/baseball/baseball_set.do" method="post"
+		action="/baseball/baseball_set.do" method="post"
 		style="display: flex; justify-content: center; align-items: center; height: 100vh;">
 		<input type="button" id="btnStart" value="게임 시작" onclick="numRandom()"
 			class="btn"> <input type="hidden" value="0" name="num_com0"

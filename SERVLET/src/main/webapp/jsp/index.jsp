@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 
@@ -82,18 +84,18 @@
 				.addEventListener(
 						"click",
 						function() {
-							location.href = 'http://192.168.200.128/calc/compute_input.do';
+							location.href = '/calc/compute_input.do';
 						})
 		document
 				.getElementById('btnBase')
 				.addEventListener(
 						"click",
 						function() {
-							location.href = 'http://192.168.200.128/jsp/baseball/baseball_main.jsp';
+							location.href = '/jsp/baseball/baseball_main.jsp';
 						})
 		document.getElementById('btnSong').addEventListener("click",
 				function() {
-					location.href = 'http://192.168.200.128/song/song.html';
+					location.href = '/song/song.html';
 				})
 	</script>
 </body>
