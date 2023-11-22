@@ -17,4 +17,4 @@ public class IndexController {
 			req.getRequestDispatcher("/jsp/index.jsp").forward(req, res);
 		}
 	}
-}
+} 
