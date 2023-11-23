@@ -21,7 +21,7 @@ public class BaseballPlayController {
 		return cc;
 	}
 
-	public static void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String uri = req.getRequestURI();
 		if ("/baseball_play.jw".equals(uri)) {
 			BaseballPlayModel.getInstance().com(req);
@@ -29,7 +29,8 @@ public class BaseballPlayController {
 			rd.forward(req, res);
 		}
 
-		if ("/basball_result.jw".equals(uri)) {
+		if ("/baseball_result.jw".equals(uri)) {
+			System.out.println("hi2");
 			BaseballPlayModel.getInstance().user(req, res);
 			RequestDispatcher rd = req.getRequestDispatcher("/jsp/baseball/baseball_result.jsp");
 			rd.forward(req, res);

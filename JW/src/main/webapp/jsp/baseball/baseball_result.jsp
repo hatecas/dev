@@ -29,7 +29,7 @@
 	<input type="button" id="btnReturn" value="돌아가기">
 		<script>
 		document.getElementById('btnReturn').addEventListener("click",function(){
-			location.href='/baseball_play.jw';
+			location.href='/jsp/baseball/baseball_play.jsp';
 		})
 	</script>
 </body>

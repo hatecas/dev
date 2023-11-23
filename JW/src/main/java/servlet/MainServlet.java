@@ -52,10 +52,10 @@ public class MainServlet extends HttpServlet{
 			BaseballMainController.service(req, res);
 		}
 		if(-1<uri.indexOf("/baseball_play.jw")) {
-			BaseballPlayController.service(req, res);
+			BaseballPlayController.getInstance().service(req, res);
 		}
 		if(-1<uri.indexOf("/baseball_result.jw")) {
-			BaseballPlayController.service(req, res);
+			BaseballPlayController.getInstance().service(req, res);
 		}
 
 	}
