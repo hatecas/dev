@@ -86,7 +86,7 @@
 					location.href = '/baseball_main.jw';
 					})
 		document.getElementById('btnSong').addEventListener("click",function() {
-					location.href = '/song/song.html';
+					location.href = '/song.jw';
 					})
 	</script>
 </body>

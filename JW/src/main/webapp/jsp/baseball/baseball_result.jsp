@@ -27,9 +27,13 @@
 	%>
 	
 	<input type="button" id="btnReturn" value="돌아가기">
+	<input type="button" id="btnHome" value="홈으로">
 		<script>
 		document.getElementById('btnReturn').addEventListener("click",function(){
 			location.href='/jsp/baseball/baseball_play.jsp';
+		})
+		document.getElementById('btnHome').addEventListener("click",function(){
+			location.href='/playground.jw';
 		})
 	</script>
 </body>

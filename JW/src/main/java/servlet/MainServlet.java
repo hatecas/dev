@@ -15,6 +15,7 @@ import index.controller.IndexController;
 import login.controller.LoginController;
 import playground.controller.PlaygroundController;
 import signin.controller.SigninController;
+import song.SongController;
 
 public class MainServlet extends HttpServlet{
 
@@ -56,6 +57,9 @@ public class MainServlet extends HttpServlet{
 		}
 		if(-1<uri.indexOf("/baseball_result.jw")) {
 			BaseballPlayController.getInstance().service(req, res);
+		}
+		if(-1<uri.indexOf("/song.jw")) {
+			SongController.service(req, res);
 		}
 
 	}
