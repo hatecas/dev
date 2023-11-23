@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import baseball.main.controller.BaseballMainController;
+import baseball.play.BaseballPlayController;
 import calc.compute.controller.CalcComputeController;
 import calc.input.controller.CalcInputController;
 import index.controller.IndexController;
@@ -46,5 +48,15 @@ public class MainServlet extends HttpServlet{
 		if(-1<uri.indexOf("/calc_compute.jw")) {
 			CalcComputeController.service(req, res);
 		}
+		if(-1<uri.indexOf("/baseball_main.jw")) {
+			BaseballMainController.service(req, res);
+		}
+		if(-1<uri.indexOf("/baseball_play.jw")) {
+			BaseballPlayController.service(req, res);
+		}
+		if(-1<uri.indexOf("/baseball_result.jw")) {
+			BaseballPlayController.service(req, res);
+		}
+
 	}
 }

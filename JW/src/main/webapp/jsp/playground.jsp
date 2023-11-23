@@ -83,7 +83,7 @@
 					location.href = '/calc_input.jw';
 					})
 		document.getElementById('btnBase').addEventListener("click",function() {
-					location.href = '/jsp/baseball/baseball_main.jsp';
+					location.href = '/baseball_main.jw';
 					})
 		document.getElementById('btnSong').addEventListener("click",function() {
 					location.href = '/song/song.html';
