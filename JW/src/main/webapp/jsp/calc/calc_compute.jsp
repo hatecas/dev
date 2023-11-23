@@ -10,7 +10,7 @@
 
 <body>
 	<div>
-		<form id="frmCalc" action="http://192.168.200.128/calc/compute.do" method="post">
+		<form id="frmCalc" action="/calc_compute.jw" method="post">
 			<input type="number" name="num1" id="" placeholder="number1"><br>
 			<input type="number" name="num2" id="" placeholder="number2"><br>
 			<select name="operation" id="operation">

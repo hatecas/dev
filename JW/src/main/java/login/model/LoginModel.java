@@ -15,7 +15,6 @@ public class LoginModel {
 		
 		if("admin".equals(user_id)&&"1234".equals(user_pw)) {
 			req.getSession().setAttribute("user_name", "User");
-			req.getRequestDispatcher("/jsp/playground.jsp").forward(req, res);
 		} else {
 			req.setAttribute("msg", "로그인 정보가 일치하지 않습니다.");
 			req.getRequestDispatcher("/jsp/index.jsp").forward(req, res);

@@ -79,24 +79,15 @@
 		</div>
 	</div>
 	<script>
-		document
-				.getElementById('btnCalc')
-				.addEventListener(
-						"click",
-						function() {
-							location.href = '/calc.jw';
-						})
-		document
-				.getElementById('btnBase')
-				.addEventListener(
-						"click",
-						function() {
-							location.href = '/jsp/baseball/baseball_main.jsp';
-						})
-		document.getElementById('btnSong').addEventListener("click",
-				function() {
+		document.getElementById('btnCalc').addEventListener("click",function() {
+					location.href = '/calc_input.jw';
+					})
+		document.getElementById('btnBase').addEventListener("click",function() {
+					location.href = '/jsp/baseball/baseball_main.jsp';
+					})
+		document.getElementById('btnSong').addEventListener("click",function() {
 					location.href = '/song/song.html';
-				})
+					})
 	</script>
 </body>
 

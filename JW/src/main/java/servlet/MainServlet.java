@@ -7,9 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import calc.controller.CalcController;
+import calc.compute.controller.CalcComputeController;
+import calc.input.controller.CalcInputController;
 import index.controller.IndexController;
 import login.controller.LoginController;
+import playground.controller.PlaygroundController;
 import signin.controller.SigninController;
 
 public class MainServlet extends HttpServlet{
@@ -34,9 +36,15 @@ public class MainServlet extends HttpServlet{
 		if(-1<uri.indexOf("/signin.jw")) {
 			SigninController.service(req, res);
 		}
+		if(-1<uri.indexOf("/playground.jw")) {
+			PlaygroundController.service(req, res);
+		}
 		//uri가 signin.jw일경우 signin.jsp로 이동
-		if(-1<uri.indexOf("/calc.jw")) {
-			CalcController.service(req, res);
+		if(-1<uri.indexOf("/calc_input.jw")) {
+			CalcInputController.service(req, res);
+		}		
+		if(-1<uri.indexOf("/calc_compute.jw")) {
+			CalcComputeController.service(req, res);
 		}
 	}
 }
