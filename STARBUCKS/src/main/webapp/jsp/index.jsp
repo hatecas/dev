@@ -7,38 +7,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>스타벅스</title>
+		<link href="<c:url value='/css/popup.css'/>" rel="stylesheet">
 	</head>
 	<body>
 		<div>
 			<h1>스타벅스에 오신걸 환영합니다!</h1>
 		</div>
-		<c:if test="${null eq sessionScope.userName}">
-		<div>
-			<span>${msg }</span>
-		</div>
-		
-		<div>
-			<form id="frmLogin" method="post" action="<c:url value='/login.star'/>">
-				<input type="text" name="user_id" placeholder="아이디" required><br>
-				<input type="text" name="user_pw" placeholder="암호" required><br>
-				<input type="submit" value="로그인">
-			</form>
-		</div>
-		
-		</c:if>
-		<c:if test="${null ne sessionScope.userName}">
+		<c:if test="${ null eq sessionScope.userName }">
 			<div>
-				<span>${userName}님</span>
+				<span style="color:red">${msg }</span>
+			</div>
+			<div>
+				<form id="frmLogin" method="post" action="<c:url value='/login.star'/>">
+					<input type="text" name="user_id" placeholder="아이디"><br>
+					<input type="password" name="userpw" placeholder="암호"><br>
+					<input type="button" id="btnLogin" value="로그인">
+				</form>
+			</div>
+		</c:if>
+		<c:if test="${ null ne sessionScope.userName }">
+			<div>
+				<span>${userName }님 </span>
 				<span>
 					<input type="button" id="btnLogout" value="로그아웃">
 				</span>
 			</div>
-		<div>
-			<ul>
-				<li><a href="<c:url value='/starbucks/menu.star'/>">메뉴</a></li>
-			</ul>
-		</div>
+			<div>
+				<ul>
+					<li><a href="<c:url value='/starbucks/menu.star'/>">메뉴</a></li>
+					<li><a href="<c:url value='/file/main.star'/>">파일</a></li>
+				</ul>
+			</div>
 		</c:if>
+		
 		<!-- https://chlolisher.tistory.com/100 -->
 		<div id="popup_layer" style="display: none">
 		  <div class="popup_box">
@@ -59,6 +60,7 @@
 		      </div>
 		  </div>
 		</div>
+		
 		<script>
 			let btnLogin = document.getElementById('btnLogin');
 			if ( null != btnLogin ) {
@@ -72,6 +74,7 @@
 					location.href = "<c:url value='/logout.star'/>";
 				});
 			}
+			
 			let getCookie = function(name) {
 				var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
 				return value? value[2] : null;
@@ -87,6 +90,14 @@
 				document.getElementById("imgBlackFridayGift").src
 				= "<c:url value='/images/cookie/" + blackFridayGift + ".png'/>"
 			}
+
 		</script>
+		
+		
+		
+		
+		
+		
+		
 	</body>
 </html>

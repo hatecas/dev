@@ -6,9 +6,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import index.model.IndexModel;
-import starbucks.model.StarbucksModel;
-
 public class IndexController {
 
 	public static void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -17,4 +14,4 @@ public class IndexController {
 			req.getRequestDispatcher("/jsp/index.jsp").forward(req, res);
 		}
 	}
-} 
+}
