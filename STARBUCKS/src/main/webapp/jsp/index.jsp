@@ -8,6 +8,7 @@
 		<meta charset="UTF-8">
 		<title>스타벅스</title>
 		<link href="<c:url value='/css/popup.css'/>" rel="stylesheet">
+		<script src="<c:url value='/js/jquery.js'/>"></script>
 	</head>
 	<body>
 		<div>
@@ -19,8 +20,8 @@
 			</div>
 			<div>
 				<form id="frmLogin" method="post" action="<c:url value='/login.star'/>">
-					<input type="text" name="user_id" placeholder="아이디"><br>
-					<input type="password" name="userpw" placeholder="암호"><br>
+					<input type="text" name="user_id" id="user_id" placeholder="아이디"><br>
+					<input type="password" name="user_pw" id="user_pw" placeholder="암호"><br>
 					<input type="button" id="btnLogin" value="로그인">
 				</form>
 			</div>
@@ -65,7 +66,19 @@
 			let btnLogin = document.getElementById('btnLogin');
 			if ( null != btnLogin ) {
 				btnLogin.addEventListener('click',function(){
-					document.getElementById('frmLogin').submit();
+					let user_id=$('#user_id').val();
+					let user_pw=$('#user_pw').val();
+					$.ajax({
+						method:"POST",
+						url:"<c:url value='/login.star'/>",
+						data:{
+							user_id:user_id,
+							user_pw:user_pw							
+						}						
+					}).done(function(msg){
+						console.log(msg);
+					});	
+					//document.getElementById('frmLogin').submit();
 				});
 			}
 			let btnLogout = document.getElementById('btnLogout');
@@ -92,12 +105,6 @@
 			}
 
 		</script>
-		
-		
-		
-		
-		
-		
-		
+
 	</body>
 </html>
